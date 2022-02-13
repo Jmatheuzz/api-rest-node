@@ -8,3 +8,11 @@
 <p> CRUD de alunos</p>
 
 <h2 align = "center"> TECNOLOGIAS UTILIZADAS </h1>
+
+<p> Node.js</p>
+<p> MySQL Workbench</p>
+<p> Insomnia</p>
+<p> Docker</p>
+<p> Sucrase</p>
+<p> Nodemon</p>
+
