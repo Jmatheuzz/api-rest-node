@@ -14,5 +14,8 @@ module.exports = {
     quotes: "off",
     "no-console": "off",
     "class-methods-use-this": "off",
+    "import/newline-after-import": "off",
+    "import/first": "off",
+    "arrow-parens": "off",
   },
 };
