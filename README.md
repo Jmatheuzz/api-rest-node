@@ -10,9 +10,10 @@
 <h2 align = "center"> TECNOLOGIAS UTILIZADAS </h1>
 
 <p> Node.js</p>
+<p> Google Cloud Platform</p>
 <p> MySQL Workbench</p>
 <p> Insomnia</p>
-<p> Docker</p>  
+<p> Docker</p>
 <p> Sucrase</p>
 <p> Nodemon</p>
 <p> Sequelize</p>
