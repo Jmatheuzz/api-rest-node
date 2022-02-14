@@ -17,5 +17,6 @@ module.exports = {
     "import/newline-after-import": "off",
     "import/first": "off",
     "arrow-parens": "off",
+    "no-param-reassign":""
   },
 };

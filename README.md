@@ -12,7 +12,8 @@
 <p> Node.js</p>
 <p> MySQL Workbench</p>
 <p> Insomnia</p>
-<p> Docker</p>
+<p> Docker</p>  
 <p> Sucrase</p>
 <p> Nodemon</p>
+<p> Sequelize</p>
 
