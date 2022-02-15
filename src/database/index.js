@@ -2,9 +2,10 @@ import Sequelize from 'sequelize';
 import databaseConfig from '../config/database';
 import Aluno from '../models/Aluno';
 import User from '../models/User';
-
-const models = [Aluno, User];
+import Foto from '../models/Foto';
+const models = [Aluno, User, Foto];
 
 const connnection = new Sequelize(databaseConfig);
 
 models.forEach(model => model.init(connnection));
+models.forEach(model => model.associate && model.associate(connnection.models));
