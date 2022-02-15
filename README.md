@@ -17,4 +17,5 @@
 <p> Sucrase</p>
 <p> Nodemon</p>
 <p> Sequelize</p>
+<p> JWT</p>
 

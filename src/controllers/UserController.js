@@ -5,7 +5,8 @@ class UserController {
 
     try {
       const novoUser = await User.create(req.body);
-      res.json(novoUser);
+      const {nome, email} = novoUser;
+      res.json({nome, email});
     } catch (error) {
       res.status(400).json({
         errors: error.errors.map((err) => err.message)
@@ -15,7 +16,7 @@ class UserController {
   async index(req, res) {
 
     try {
-      const users = await User.findAll();
+      const users = await User.findAll({attributes:['nome', 'email']});
       res.json(users);
     } catch (error) {
       res.json(null);
@@ -26,6 +27,7 @@ class UserController {
 
     try {
       const user = await User.findByPk(req.params.id);
+      const {nome, email} = user;
       res.json(user);
     } catch (error) {
       res.json(null);
@@ -36,17 +38,11 @@ class UserController {
 
     try {
 
-      const user = await User.findByPk(req.params.id);
-
-      if(!user) {
-        return res.status(400).json({
-          errors: ['Usuario não existe']
-        });
-      }
+      const user = await User.findByPk(req.userId);
 
       const novosDados = await user.update(req.body);
-
-      res.json(novosDados);
+      const {nome, email} = novosDados;
+      res.json({nome, email});
     } catch (error) {
       res.status(400).json({
         errors: error.errors.map((err) => err.message)
@@ -58,7 +54,7 @@ class UserController {
 
     try {
 
-      const user = await User.findByPk(req.params.id);
+      const user = await User.findByPk(req.userId);
 
       if(!user) {
         return res.status(400).json({
@@ -67,7 +63,7 @@ class UserController {
       }
 
       await user.destroy();
-      res.json(user);
+      res.json(null);
     } catch (error) {
       res.status(400).json({
         errors: error.errors.map((err) => err.message)
